@@ -1,0 +1,6 @@
+int32[] id
+float64[] val_rad
+float64 time
+---
+bool success
+string message

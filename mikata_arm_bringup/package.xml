@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>mikata_arm_bringup</name>
+  <version>0.0.0</version>
+  <description>The mikata_arm_bringup package</description>
+  <maintainer email="jp.support@robotis.com">robotis</maintainer>
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>mikata_arm_msgs</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>dynamixel_sdk</build_depend>
+  <build_depend>eigen</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>mikata_arm_msgs</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>dynamixel_sdk</run_depend>
+  <run_depend>eigen</run_depend>
+  
+</package>

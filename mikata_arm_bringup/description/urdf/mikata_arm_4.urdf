@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<robot name="mikata_arm_4">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint1.dae"/>
+      </geometry>
+      <origin rpy="0 0 -1.57075" xyz="0 0 0.017"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -1.57075" xyz="0 0 0.017"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="plate_link">
+    <visual>
+      <geometry>
+        <box size="0.297 0.210 0.005"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.8 0.7 0.6 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="plate_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="plate_link"/>
+    <origin xyz="0.0755 0 -0.005"/>
+  </joint>
+  
+  <link name="link_2">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint2.dae"/>
+      </geometry>
+      <origin rpy="1.57075 0 1.57075" xyz="0 0 .0405"/>
+    </visual>
+    <collision>
+      <origin rpy="1.57075 0 1.57075" xyz="0 0 .0405"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.141592653589793" upper="3.1400586728019073" effort="1000" velocity="0.7"/>
+    <origin xyz="0 0 .0355"/>
+  </joint>
+
+  <link name="link_3">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint3.dae"/>
+      </geometry>
+      <origin rpy="0 0 -1.57075" xyz=".024 0 .148"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -1.57075" xyz=".024 0 .148"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint3.stl"/>
+      </geometry>
+    </collision>    
+  </link>
+  <joint name="joint_2" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.8070293681292853" upper="2.073942025221387" effort="1000" velocity="0.7"/>
+    <origin xyz="0 0 .0405"/>
+  </joint>
+  
+  <link name="link_4">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint4.dae"/>
+      </geometry>
+      <origin rpy="0 3.14159 -1.57075" xyz=".150 0 0"/>
+    </visual>
+    <collision>
+      <origin rpy="0 3.14159 -1.57075" xyz=".150 0 0"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3" type="revolute">
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.7456701366138596" upper="1.4143302864305611" effort="1000" velocity="0.7"/>
+    <origin xyz=".024 0 .148"/>
+  </joint>
+
+  <link name="link_5">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint5.dae"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz=".04225 .015 0"/>
+    </visual>
+    <collision>
+      <origin rpy="0 1.57075 0" xyz=".04225 .015 0"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint5.stl"/>
+      </geometry>
+    </collision>    
+  </link>
+  <joint name="joint_4" type="revolute">
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.7303303287350031" upper="1.88986433067511" effort="1000" velocity="0.7"/>
+    <origin xyz="0.150 0 0"/>
+  </joint>
+
+  <link name="left_gripper">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.dae"/>
+      </geometry>
+      <origin rpy="3.14159 0 -.9773835"/>
+    </visual>
+    <collision>
+      <origin rpy="3.14159 0 -.9773835"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.stl"/>
+      </geometry>
+    </collision>    
+  </link>
+  <joint name="gripper_joint_5" type="revolute">
+    <parent link="link_5"/>
+    <child link="left_gripper"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0" upper="1.452906" effort="1000" velocity="0.7"/>
+    <origin xyz=".04225 .015 0"/>
+  </joint>
+
+  <link name="right_gripper">
+    <visual>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.dae"/>
+      </geometry>
+      <origin rpy="0 0 .9773835"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 .9773835"/>
+      <geometry>
+	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.stl"/>
+      </geometry>
+    </collision>    
+  </link>
+  <joint name="right_gripper_joint" type="revolute">
+    <parent link="link_5"/>
+    <child link="right_gripper"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0" upper="1.452906" effort="1000" velocity="0.7"/>
+    <origin xyz=".04225 -.015 0"/>
+    <mimic joint="gripper_joint_5" multiplier="-1"/>
+  </joint>
+
+</robot>

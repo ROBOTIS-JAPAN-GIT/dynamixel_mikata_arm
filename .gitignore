@@ -1,0 +1,10 @@
+# ROS gen file
+/CMakeLists.txt
+.catkin_tools
+
+# editor work file
+*~
+\#*#
+.#*
+.*.swp
+*.bak

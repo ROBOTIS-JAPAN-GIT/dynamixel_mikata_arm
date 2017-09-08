@@ -1,0 +1,21 @@
+<launch>
+  <arg name="gui" default="False"/>
+
+  <!-- Load urdf and set robot model -->
+  <param name="robot_description" command="cat $(find mikata_arm_bringup)/description/urdf/mikata_arm_4.urdf"/>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+    <rosparam param="source_list">["dxl/joint_state"]</rosparam>
+  </node>
+
+  <!-- Launch ROS bringup program -->
+  <node pkg="mikata_arm_bringup" type="bringup" name="bringup" output="screen"/>
+
+  <!-- Simple dynamic reconfigure GUI sample -->
+  <group if="$(arg gui)">
+    <node pkg="mikata_arm_bringup" type="gui_control" name="gui_control"/>
+    <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure"/>
+  </group>
+  
+</launch>
+  
