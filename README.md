@@ -9,8 +9,7 @@ ROS対応ロボット専用アクチュエーターDYNAMIXEL(ダイナミクセ�
 
 DYNAMIXEL Xシリーズ e-マニュアル :http://support.robotis.com/en/product/actuator/dynamixel_x_main.htm 
 
-Contact: japan@robotis.com
-
+Contact: jp.support@robotis.com
 
 ## 動作環境
 
@@ -43,7 +42,7 @@ cd ..
 catkin build
 ```
 
-4. USB2DXLの読み書き許可とlatencyを設定するため、udev rules を追加します。
+4. USB2DXLの読み書き許可とlatency_timerを設定するため、udev rules を追加します。
 ```
 cd ~/mikata_arm_ws
 sudo cp src/dynamixel_mikata_arm/99-ftdi_sio.rules /etc/udev/rules.d/
@@ -70,43 +69,43 @@ source ./devel/setup.bash
 
 次に、roslaunch や rosrun で各プログラムを実行します。bringup ノードを立ち上げると、ROSのトピックやサービスで Mikata Arm を動かすことができます。cli_control では、コマンドラインインターフェースにより実機を動かせたり、ティーチングやIKのデモを実行することができます。
 
-例えば:
+### 実行例:
 
-ROS GUI版のサンプルプログラム実行方法
-```
-roslaunch mikata_arm_bringup bringup.launch gui:=true
-```
+* ROS GUI版のサンプルプログラムを実行
+  - mikata_armのbringupノードを起動。
+    ```
+    roslaunch mikata_arm_bringup bringup.launch gui:=true
+    ```
+  - bringup.launch の起動を待った後、rvizを起動。
+    ```
+    roslaunch mikata_arm_bringup rviz.launch
+    ```
+    
+* CLI版のサンプルプログラムを実行
 
-bringup.launch の起動を待った後、rvizを起動。
-```
-roslaunch mikata_arm_bringup rviz.launch
-```
-
-あるいは:
-
-CLI版のサンプルプログラム実行方法
-```
-rosrun mikata_arm_toolbox cli_control
-```
-
-ROS GUI版、CLI版の２つを同時に実行することはできませんのでご注意下さい。
+    ```
+    $ rosrun mikata_arm_toolbox cli_control
+    ```
+    
+* 注意) ROS GUI版、CLI版の２つを同時に実行することはできません。
+  
 
 
 ## サンプルプログラム紹介
 
 ### mikata_arm_bringup:
 
-**bringup.launch** : ROSのサンプルプログラムです。Mikata Arm を操作するためのトピックやサービスを立ち上げます。'gui' オプションで簡単なGUI操作が可能となります。
+* **bringup.launch** : ROSのサンプルプログラムです。Mikata Arm を操作するためのトピックやサービスを立ち上げます。'gui' オプションで簡単なGUI操作が可能となります。
 
-**rviz.launch** : Mikata Arm をrvizで表示します。実行にはbringup.launchが必要となります。
+* **rviz.launch** : Mikata Arm をrvizで表示します。実行にはbringup.launchが必要となります。
 
-**motion_player_rviz.launch** : Mikata Arm と共に、 MotionPlayer に関する情報をrvizで表示します。
+* **motion_player_rviz.launch** : Mikata Arm と共に、 MotionPlayer に関する情報をrvizで表示します。
 
 
 ### mikata_arm_toolbox:
 
-**cli_control** : コマンドラインインターフェースにより Mikata Arm を操作できます。各アクチュエータへの指令・情報取得だけでなく、ティーチングや逆運動学の例もあります。
+* **cli_control** : コマンドラインインターフェースにより Mikata Arm を操作できます。各アクチュエータへの指令・情報取得だけでなく、ティーチングや逆運動学の例もあります。
 
-**dxl_factory_reset** : 全DYNAMIXELの初期化。
+* **dxl_factory_reset** : 全DYNAMIXELの初期化。
 
-**dxl_setup** : Mikata Arm の構造に合わせてDYNAMIXELの設定を変更します。cli_controlの実行には必要になります。
+* **dxl_setup** : Mikata Arm の構造に合わせてDYNAMIXELの設定を変更します。cli_controlの実行には必要になります。
