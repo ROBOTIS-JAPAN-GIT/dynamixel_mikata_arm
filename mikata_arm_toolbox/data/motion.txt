@@ -27,27 +27,27 @@ Start_Pose   ,2.0
 Bow_Pose   ,2.0
 &WAIT   ,2.0
 Start_Pose   ,2.0
-Gripper_Open_0  ,0.4
+Gripper_Open_0  ,0.5
 Gripper_Close_1 ,0.4
 Gripper_Open_0  ,0.4
-Gripper_Close_2 ,0.4
+Gripper_Close_2 ,0.5
 Gripper_Open_1  ,0.4
 
 ### demo start ###
 super_man   ,2.0
 &WAIT   ,1.0
 superR      ,2.0
-Gripper_Close_1 ,0.3
-Gripper_Open_0  ,0.3
+Gripper_Close_1 ,0.6
+Gripper_Open_0  ,0.5
 superL      ,3.0
-Gripper_Close_1 ,0.3
-Gripper_Open_0  ,0.3
+Gripper_Close_1 ,0.6
+Gripper_Open_0  ,0.5
 put_0   ,2.0
 put_1   ,1.5
 
 ### GRASP on put_2 pose ###
 put_2   ,1.5
-Gripper_Close_0 ,0.3
+Gripper_Close_0 ,0.5
 put_2   ,2.0
 put_1   ,2.0
 
@@ -75,9 +75,9 @@ put_2   ,1.5
 put_1   ,1.5
 super_man   ,2.0
 Gripper_Open_0  ,0.4
-Gripper_Close_0 ,0.4
+Gripper_Close_0 ,0.5
 Gripper_Open_0  ,0.4
-Gripper_Close_0 ,0.4
+Gripper_Close_0 ,0.5
 
 ### Go back and restart ###
 Rest_Pose   ,3.0
