@@ -108,6 +108,7 @@ void MotionPlayer::start () {
 
 void MotionPlayer::stop () {
   is_enabled = false;
+  is_paused = false;
   status = "STOPPED";
   n = 0;
   ROS_INFO ("MotionPlayer disabled");
