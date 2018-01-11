@@ -1,5 +1,5 @@
-#include "dxl_util.h"
-#include "dxl_ctrl_table.h"
+#include "mikata_arm_toolbox/dxl_util.h"
+#include "mikata_arm_toolbox/dxl_ctrl_table.h"
 
 /** Write basic configuration to Mikata Arm 4DOF 's DYNAMIXELs **/
 

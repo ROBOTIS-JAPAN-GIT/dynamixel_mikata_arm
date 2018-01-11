@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <package>
   <name>mikata_arm_msgs</name>
-  <version>0.0.0</version>
+  <version>0.9.0</version>
   <description>The mikata_arm_msgs package</description>
-  <maintainer email="jp.support@robotis.com">robotis</maintainer>
-  <license>TODO</license>
-
+  <license>Apache-2.0</license>
+  <author email="jp.support@robotis.com">ROBOTIS Japan Technical Support</author>
+  <maintainer email="jp.support@robotis.com">ROBOTIS Japan Technical Support</maintainer>
+  <url type="website">https://github.com/ROBOTIS-JAPAN-GIT/dynamixel_mikata_arm</url>
+  <url type="repository">https://github.com/ROBOTIS-JAPAN-GIT/dynamixel_mikata_arm</url>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>message_generation</build_depend>
   <build_depend>std_msgs</build_depend>

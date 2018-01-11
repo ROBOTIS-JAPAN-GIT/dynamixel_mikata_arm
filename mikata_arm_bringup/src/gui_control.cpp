@@ -1,8 +1,8 @@
 #include <ros/ros.h>
 #include <dynamic_reconfigure/server.h>
-#include "../../mikata_arm_toolbox/include/srv_util.h"
-#include "../../mikata_arm_toolbox/include/dxl_ctrl_table.h"
-#include "../../mikata_arm_toolbox/include/conversion_util.h"
+#include <mikata_arm_toolbox/dxl_ctrl_table.h>
+#include <mikata_arm_toolbox/conversion_util.h>
+#include "mikata_arm_bringup/srv_util.h"
 #include "mikata_arm_bringup/PositionConfig.h"
 #include "mikata_arm_bringup/VelocityConfig.h"
 

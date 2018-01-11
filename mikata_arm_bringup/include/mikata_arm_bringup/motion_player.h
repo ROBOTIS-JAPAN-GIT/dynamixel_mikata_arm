@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <iomanip>
 #include "writeAll.h"
-#include "../../mikata_arm_toolbox/include/teach.h"
+#include "mikata_arm_toolbox/teach.h"
 
 struct motion{
   node pose;

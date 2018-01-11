@@ -1,8 +1,8 @@
 #ifndef __WRITE_H
 #define __WRITE_H
 
-#include "../../mikata_arm_toolbox/include/basic_util.h"
-#include "../../mikata_arm_toolbox/include/kinematics.h"
+#include "mikata_arm_toolbox/basic_util.h"
+#include "mikata_arm_toolbox/kinematics.h"
 
 void writeAll(std::vector<int> id_vec, std::vector<double> q, double time=0) {
   std::vector<int> present_vel = getVelAll(id_vec);

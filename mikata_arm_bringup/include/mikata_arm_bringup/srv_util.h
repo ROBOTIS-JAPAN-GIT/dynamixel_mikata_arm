@@ -2,7 +2,7 @@
 #define __SRV_UTIL_H
 
 #include <ros/ros.h>
-#include "parameters.h"
+#include <mikata_arm_toolbox/parameters.h>
 #include "mikata_arm_msgs/GetInfo.h"
 #include "mikata_arm_msgs/SetInfo.h"
 #include "mikata_arm_msgs/onTime.h"

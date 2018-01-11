@@ -1,4 +1,4 @@
-#include "motion_player.h"
+#include "mikata_arm_bringup/motion_player.h"
 #include <cstdlib>
 
 std::string POSE_FILE = std::string(std::getenv("HOME")) + "/.robotis/mikata_arm/positions.txt";
