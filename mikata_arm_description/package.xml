@@ -1,22 +1,13 @@
 <?xml version="1.0"?>
 <package>
-  <name>mikata_arm</name>
+  <name>mikata_arm_description</name>
   <version>0.9.0</version>
-  <description>Sample programs and utilities for the Dynamixel MikataArm (meta package)</description>
+  <description>The mikata_arm description package</description>
   <license>Apache-2.0</license>
   <author email="jp.support@robotis.com">ROBOTIS Japan Technical Support</author>
   <maintainer email="jp.support@robotis.com">ROBOTIS Japan Technical Support</maintainer>
   <url type="website">https://github.com/ROBOTIS-JAPAN-GIT/dynamixel_mikata_arm</url>
   <url type="repository">https://github.com/ROBOTIS-JAPAN-GIT/dynamixel_mikata_arm</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>dynamixel_sdk</run_depend>
-  <run_depend>mikata_arm_bringup</run_depend>
-  <run_depend>mikata_arm_msgs</run_depend>
-  <run_depend>mikata_arm_toolbox</run_depend>
-  <run_depend>mikata_arm_description</run_depend>
-
-  <export>
-    <metapackage/>
-  </export>
+  
 </package>
-

@@ -3,6 +3,6 @@
         type="rviz_overlay_text.py"
         respawn="true"
         name="rviz_overlay_text"/>
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mikata_arm_bringup)/description/rviz/motion_player.rviz" required="true"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mikata_arm_bringup)/launch/motion_player.rviz" required="true"/>
 
 </launch>

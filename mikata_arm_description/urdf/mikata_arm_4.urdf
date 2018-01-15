@@ -4,14 +4,14 @@
   <link name="base_link">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint1.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint1.dae"/>
       </geometry>
       <origin rpy="0 0 -1.57075" xyz="0 0 0.017"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.57075" xyz="0 0 0.017"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint1.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint1.stl"/>
       </geometry>
     </collision>
   </link>
@@ -35,14 +35,14 @@
   <link name="link_2">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint2.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint2.dae"/>
       </geometry>
       <origin rpy="1.57075 0 1.57075" xyz="0 0 .0405"/>
     </visual>
     <collision>
       <origin rpy="1.57075 0 1.57075" xyz="0 0 .0405"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint2.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint2.stl"/>
       </geometry>
     </collision>
   </link>
@@ -57,14 +57,14 @@
   <link name="link_3">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint3.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint3.dae"/>
       </geometry>
       <origin rpy="0 0 -1.57075" xyz=".024 0 .148"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.57075" xyz=".024 0 .148"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint3.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint3.stl"/>
       </geometry>
     </collision>    
   </link>
@@ -79,14 +79,14 @@
   <link name="link_4">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint4.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint4.dae"/>
       </geometry>
       <origin rpy="0 3.14159 -1.57075" xyz=".150 0 0"/>
     </visual>
     <collision>
       <origin rpy="0 3.14159 -1.57075" xyz=".150 0 0"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint4.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint4.stl"/>
       </geometry>
     </collision>
   </link>
@@ -101,14 +101,14 @@
   <link name="link_5">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint5.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint5.dae"/>
       </geometry>
       <origin rpy="0 1.57075 0" xyz=".04225 .015 0"/>
     </visual>
     <collision>
       <origin rpy="0 1.57075 0" xyz=".04225 .015 0"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_joint5.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_joint5.stl"/>
       </geometry>
     </collision>    
   </link>
@@ -123,14 +123,14 @@
   <link name="left_gripper">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_gripper.dae"/>
       </geometry>
       <origin rpy="3.14159 0 -.9773835"/>
     </visual>
     <collision>
       <origin rpy="3.14159 0 -.9773835"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_gripper.stl"/>
       </geometry>
     </collision>    
   </link>
@@ -145,14 +145,14 @@
   <link name="right_gripper">
     <visual>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.dae"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_gripper.dae"/>
       </geometry>
       <origin rpy="0 0 .9773835"/>
     </visual>
     <collision>
       <origin rpy="0 0 .9773835"/>
       <geometry>
-	<mesh filename="package://mikata_arm_bringup/description/meshes/mikata_arm_4_gripper.stl"/>
+	<mesh filename="package://mikata_arm_description/meshes/mikata_arm_4_gripper.stl"/>
       </geometry>
     </collision>    
   </link>
