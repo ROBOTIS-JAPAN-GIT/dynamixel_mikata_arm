@@ -2,7 +2,7 @@
   <arg name="gui" default="False"/>
 
   <!-- Load urdf and set robot model -->
-  <param name="robot_description" command="cat $(find mikata_arm_bringup)/description/urdf/mikata_arm_4.urdf"/>
+  <param name="robot_description" command="cat $(find mikata_arm_description)/urdf/mikata_arm_4.urdf"/>
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
     <rosparam param="source_list">["dxl/joint_state"]</rosparam>

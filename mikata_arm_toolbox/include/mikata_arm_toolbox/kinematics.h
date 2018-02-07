@@ -14,25 +14,30 @@
 * limitations under the License.
 *******************************************************************************/
 
-#include "mikata_arm_toolbox/dxl_util.h"
+#ifndef __KINEMATICS_H
+#define __KINEMATICS_H
 
-/** Factory Reset all DYNAMIXELs **/
+#include "link.h"
+#include "parameters.h"
+#include <stdlib.h>
 
-#define OPERATION_MODE 0x02 //reset all values except ID and baudrate
+/** Kinematic calculation for solving Forward and Inverse Kinematics **/
 
-int main()
-{
-  dxl_setup();
-  pingAll();
-  
-  for (int id=1; id<=LINK_NUM_GRIPPER; id++) {
-    std::cout << "Resetting ID " << id << std::endl;
-    dxl_comm_result = packetHandler->factoryReset(portHandler, id, OPERATION_MODE, &dxl_error);
-    check_error(dxl_comm_result, dxl_error);
-  }
+/**
+#define X_AXIS 1
+#define Y_AXIS 2
+#define Z_AXIS 3
+#define IK_THRESHOLD 1    // [mm]
+#define IK_GAIN 0.001
+#define LIMIT_TIMES 30000
+**/
 
-  std::cout << "Succeeded on resetting all." << std::endl;
+extern Link chain[LINK_NUM_GRIPPER];
+//const Matrix3d I = Matrix3d::Identity();
 
-  return 0;
-}
-    
+void setChain();        // Set basic parameters for DYNAMIXEL Mikata Arm 4DOF
+void solveFK(std::vector<double> q);       // Solve Forward Kinematics
+MatrixXd calcJacobian();        // Calculate base Jacobian
+bool solveIK(Vector3d goal_pos);        // Solve Inverse Kinematics for designed Goal Position
+
+#endif

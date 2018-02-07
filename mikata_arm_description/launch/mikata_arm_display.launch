@@ -1,0 +1,21 @@
+<launch>
+  <arg name="model" default="$(find mikata_arm_description)/urdf/mikata_arm_4.urdf"/>
+  <arg name="rvizconfig" default="$(find mikata_arm_description)/launch/mikata_arm_display.rviz" />
+  <arg name="gui" default="true" />
+
+  <!-- Load urdf and set robot model -->
+  <!-- name="robot_description" textfile="$(find mikata_arm_description)/urdf/mikata_arm_4.urdf"/ -->
+  <param name="robot_description" textfile="$(arg model)" />
+  <param name="use_gui" value="true" />
+
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+  </node>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  </node>
+
+  <!-- Launch Rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rvizconfig)"/>
+  
+</launch>
+  
