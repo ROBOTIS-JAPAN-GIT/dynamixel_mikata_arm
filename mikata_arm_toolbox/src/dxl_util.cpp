@@ -82,11 +82,11 @@ void check_error(int dxl_res, uint8_t error, std::string msg)        // Handle E
 //default: msg=""
 {
   if (dxl_res != COMM_SUCCESS) {
-    packetHandler->printTxRxResult(dxl_res);
+    printf("%s\n", packetHandler->getTxRxResult(dxl_res));
     throw std::runtime_error(msg.c_str());    
   }
   else if (error != 0) {
-    packetHandler->printRxPacketError(error);
+    printf("%s\n", packetHandler->getRxPacketError(error));
     throw std::runtime_error(msg.c_str());
   }
 }
