@@ -1,5 +1,7 @@
-# DYNAMIXEL Mikata Arm
-The ROS-enabled Open Source Robotics Arm for education, research, competision (e.g. RoboCup@Home).
+# DYNAMIXEL MikataArm
+**PLEASE ALSO CHECK THE NEWEST REPOSITORY AT https://github.com/ROBOTIS-JAPAN-GIT/open_manipulator**
+
+The ROS-enabled Open Source Robotics Arm for education, research, competition (e.g. RoboCup@Home).
 
 This repository provides an install guide and sample programs.
 
@@ -22,7 +24,7 @@ Ubuntu 16.04 (x86_64), ROS kinetic, Dynamixel SDK 3.4.7 で動作検証してい
 
 ## インストレーションガイド
 
-Mikata Armを初めて使用する際は、以下の手順に沿ってソフトウェアのインストールと初期設定を行ってください。
+MikataArmを初めて使用する際は、以下の手順に沿ってソフトウェアのインストールと初期設定を行ってください。
 
 1. ROS kinetic をインストールします。
    http://wiki.ros.org/kinetic/Installation/Ubuntu の指示に従って `ros-kinetic-desktop` をインストールします
@@ -67,7 +69,7 @@ cd ~/mikata_arm_ws
 source ./devel/setup.bash
 ```
 
-次に、roslaunch や rosrun で各プログラムを実行します。bringup ノードを立ち上げると、ROSのトピックやサービスで Mikata Arm を動かすことができます。cli_control では、コマンドラインインターフェースにより実機を動かせたり、ティーチングやIKのデモを実行することができます。
+次に、roslaunch や rosrun で各プログラムを実行します。bringup ノードを立ち上げると、ROSのトピックやサービスで MikataArm を動かすことができます。cli_control では、コマンドラインインターフェースにより実機を動かせたり、ティーチングやIKのデモを実行することができます。
 
 ### 実行例:
 
@@ -95,17 +97,17 @@ source ./devel/setup.bash
 
 ### mikata_arm_bringup:
 
-* **bringup.launch** : ROSのサンプルプログラムです。Mikata Arm を操作するためのトピックやサービスを立ち上げます。'gui' オプションで簡単なGUI操作が可能となります。
+* **bringup.launch** : ROSのサンプルプログラムです。MikataArm を操作するためのトピックやサービスを立ち上げます。'gui' オプションで簡単なGUI操作が可能となります。
 
-* **rviz.launch** : Mikata Arm をrvizで表示します。実行にはbringup.launchが必要となります。
+* **rviz.launch** : MikataArm をrvizで表示します。実行にはbringup.launchが必要となります。
 
-* **motion_player_rviz.launch** : Mikata Arm と共に、 MotionPlayer に関する情報をrvizで表示します。
+* **motion_player_rviz.launch** : MikataArm と共に、 MotionPlayer に関する情報をrvizで表示します。
 
 
 ### mikata_arm_toolbox:
 
-* **cli_control** : コマンドラインインターフェースにより Mikata Arm を操作できます。各アクチュエータへの指令・情報取得だけでなく、ティーチングや逆運動学の例もあります。
+* **cli_control** : コマンドラインインターフェースにより MikataArm を操作できます。各アクチュエータへの指令・情報取得だけでなく、ティーチングや逆運動学の例もあります。
 
 * **dxl_factory_reset** : 全DYNAMIXELの初期化。
 
-* **dxl_setup** : Mikata Arm の構造に合わせてDYNAMIXELの設定を変更します。cli_controlの実行には必要になります。
+* **dxl_setup** : MikataArm の構造に合わせてDYNAMIXELの設定を変更します。cli_controlの実行には必要になります。
